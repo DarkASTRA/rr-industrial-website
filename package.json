@@ -1,0 +1,14 @@
+{
+  "name": "rr-industrial-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modern corporate website for R.R. Industrial Corporation.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.1.4"
+  }
+}
