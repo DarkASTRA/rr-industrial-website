@@ -5,6 +5,8 @@ const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
 const sections = [...document.querySelectorAll("main section[id]")];
 const quoteForm = document.querySelector("#quote");
 const formNote = document.querySelector("#form-note");
+const heroCard = document.querySelector(".hero-card");
+const cursorGlow = document.querySelector(".cursor-glow");
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -14,6 +16,26 @@ const setHeaderState = () => {
 
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
+
+if (window.matchMedia("(pointer: fine)").matches) {
+  window.addEventListener("pointermove", (event) => {
+    cursorGlow.style.setProperty("--x", `${event.clientX}px`);
+    cursorGlow.style.setProperty("--y", `${event.clientY}px`);
+  });
+
+  heroCard.addEventListener("pointermove", (event) => {
+    const bounds = heroCard.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    heroCard.style.setProperty("--tilt-x", `${y * -7}deg`);
+    heroCard.style.setProperty("--tilt-y", `${x * 8}deg`);
+  });
+
+  heroCard.addEventListener("pointerleave", () => {
+    heroCard.style.setProperty("--tilt-x", "0deg");
+    heroCard.style.setProperty("--tilt-y", "0deg");
+  });
+}
 
 const closeMenu = () => {
   mainNav.classList.remove("open");

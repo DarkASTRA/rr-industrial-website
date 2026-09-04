@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -21,6 +21,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
     <header class="site-header" id="top">
       <div class="topbar">
@@ -67,10 +68,11 @@
       <section class="hero" id="home">
         <div class="hero-photo" aria-hidden="true"></div>
         <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
         <div class="container hero-inner">
           <div class="hero-copy reveal">
-            <p class="eyebrow"><span></span> Nationwide steel distribution</p>
-            <h1>Steel for projects that <em>shape India.</em></h1>
+            <p class="eyebrow"><span></span> India’s steel supply network</p>
+            <h1>Built in steel. <em>Built for momentum.</em></h1>
             <p class="hero-lede">
               Reliable structural steel supply, flexible trade credit and coordinated
               road-and-rail delivery for infrastructure and industrial projects of every scale.
@@ -92,11 +94,11 @@
           <aside class="hero-card reveal reveal-delay" aria-label="Supply capability">
             <div class="hero-card-top">
               <span class="status-dot"></span>
-              <span>Ready for project enquiries</span>
+              <span>Supply desk open for enquiries</span>
             </div>
             <div class="steel-mark" aria-hidden="true">
               <span>RR</span>
-              <small>Strength in every supply</small>
+              <small>Material • Credit • Logistics</small>
             </div>
             <div class="hero-card-bottom">
               <p>Material sourcing</p>
@@ -110,6 +112,13 @@
           <span></span> Scroll to discover
         </a>
       </section>
+
+      <div class="motion-rail" aria-label="Supply capabilities">
+        <div class="motion-track">
+          <span>Structural steel</span><i>◆</i><span>Pan-India delivery</span><i>◆</i><span>Trade credit</span><i>◆</i><span>Road + rail logistics</span><i>◆</i>
+          <span>Structural steel</span><i>◆</i><span>Pan-India delivery</span><i>◆</i><span>Trade credit</span><i>◆</i><span>Road + rail logistics</span><i>◆</i>
+        </div>
+      </div>
 
       <section class="trust-bar" aria-label="Core commitments">
         <div class="container trust-grid">
@@ -388,6 +397,8 @@
         </div>
       </section>
     </main>
+
+    <a class="floating-enquiry" href="#quote"><span>Start an enquiry</span><b>↗</b></a>
 
     <footer class="site-footer">
       <div class="container footer-top">
